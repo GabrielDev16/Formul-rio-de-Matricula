@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario HTML5 e CSS3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title">
+        <h2>Preencha os Campos a Seguir Para Realizarmos Seu Cadastro.</h2>
+    </div>
+    <div class="container">
+        <form action="" autocomplete="on" method="post">
+           <!-- Dados do aluno como nome, sobrenome, data de nascimento e genero -->
+            <fieldset>
+                <legend>Dados do Aluno</legend>
+                <label for="inome">Nome</label>
+                <input type="text" name="Nome" id="inome" required maxlength="10" minlength="5" placeholder="Nome">
+                <label for="isobrenome">Sobrenome</label>
+                <input type="text" name="Sobrenome" id="isobrenome" required maxlength="20" minlength="10"
+                    placeholder="Sobrenome">
+                <label for="idatans">Data de Nascimento</label>
+                <input type="date" name="datadenascimento" id="idatans" required>
+                <label for="igenero">Genero</label>
+                <select required    name="genero" id="igenero">
+                    <option value="">Selecionar</option>
+                    <option value="">Masculino</option>
+                    <option value="">Feminino</option>
+                    <option value="">Outro</option>
+                    <option value="">Prefiro não Informar</option>
+                </select>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Contato</legend>
+                <label for="iemail">Email</label>
+                <input type="email" name="email" id="iemail" required minlength="10" maxlength="30" placeholder="Email">
+                <!-- Conferir no CSS se ficaram uma do lado da outra. -->
+                <div class="passoword-tel">
+                    <label for="isenha">Senha</label>
+                    <input type="password" name="Senha" id="isenha" required min="8" maxlength="20" placeholder="Senha">
+                    <label for="itelefone">Telefone</label>
+                    <input type="tel" name="Telefone" id="itelefone" required pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="(00) 00000-0000">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dados da Escola Anterior</legend>
+                <label for="radio1"><input type="radio" name="Fundamental" id="radio1" required>Fundamental Menor</label>
+                <label for="radio2"><input type="radio" name="Fundamental" id="radio2" required>Fundamental Maior</label>
+                <label for="radio3"><input type="radio" name="Fundamental" id="radio3" required>Ensino Médio</label>
+                <div class="caixa2">
+                    <label for="imédia-final">Média Final</label>
+                    <input type="number" name="Média" id="imédia-final" step="0.1" max="10" min="0" required>
+                    <br>
+                    <label for="iboletim">Boletim</label>
+                    <input type="file" name="Boletim" id="iboletim" required>
+                </div>
+            </fieldset>
+            <div class="buttons">
+                <input class="btn-edit" type="submit" value="Enviar">
+                <input class="btn-edit" type="reset" value="Limpar">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
